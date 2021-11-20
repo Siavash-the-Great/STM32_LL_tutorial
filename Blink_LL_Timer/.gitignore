@@ -1,4 +1,0 @@
-# ignore objects and archives, anywhere in the tree.
-    *.[od]
-# ignore crf files, anywhere in the tree.
-    *.crf

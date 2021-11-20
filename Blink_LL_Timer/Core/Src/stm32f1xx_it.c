@@ -207,7 +207,7 @@ void TIM1_UP_IRQHandler(void)
   {
     /* Clear the update interrupt flag*/
 		LL_TIM_ClearFlag_UPDATE(TIM1);
-		LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_13);
+		LL_GPIO_TogglePin(GPIOC, LL_GPIO_PIN_13);			//toggle PortA_pin13 whenever interrupt happens
   }
  
   /* USER CODE END TIM1_UP_IRQn 0 */

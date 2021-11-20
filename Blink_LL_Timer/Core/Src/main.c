@@ -98,7 +98,8 @@ int main(void)
   MX_GPIO_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
-
+	LL_TIM_EnableCounter(TIM1);				//Enable counter
+	LL_TIM_EnableIT_UPDATE(TIM1);			//Enable interrupt for Timer update
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -106,8 +107,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-LL_TIM_EnableCounter(TIM1);
-LL_TIM_EnableIT_UPDATE(TIM1);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
