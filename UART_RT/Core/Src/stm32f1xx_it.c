@@ -43,10 +43,10 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-volatile int r_index=0;
-volatile int w_index=0;
-volatile char buffer[100];
-volatile int counter = 0;
+volatile int r_index=0;		//index for reading from the buffer
+volatile int w_index=0;		//index for writing into the buffer
+volatile char buffer[100];	//declaring the buffer
+volatile int counter = 0;	//extra variable to counting unread elements of the buffer
 
 /* USER CODE END PV */
 
