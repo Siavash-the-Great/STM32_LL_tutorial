@@ -104,10 +104,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-LL_GPIO_SetOutputPin(GPIOC, LL_GPIO_PIN_13);
-LL_mDelay(500);
-LL_GPIO_ResetOutputPin(GPIOC, LL_GPIO_PIN_13);
-LL_mDelay(500);
+LL_GPIO_SetOutputPin(GPIOC, LL_GPIO_PIN_13);         //Set PotA_pin13 to Vdd to turn-off the LED
+LL_mDelay(500);                                      //500ms Delay
+LL_GPIO_ResetOutputPin(GPIOC, LL_GPIO_PIN_13);       //Set PotA_pin13 to Gnd to turn-off the LED
+LL_mDelay(500);                                      //500ms Delay
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
