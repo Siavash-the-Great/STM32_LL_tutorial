@@ -27,7 +27,7 @@ volatile int w_index=0;		//index for writing into the buffer
 volatile char buffer[100];	//declaring the buffer
 volatile int counter = 0;	//extra variable to counting unread elements of the buffer
 
-volatile uint16_t ADC_Value;
+volatile uint16_t ADC_Value;    //Define variable ADC_Value 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
