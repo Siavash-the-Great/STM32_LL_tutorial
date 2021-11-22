@@ -24,14 +24,14 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint16_t adc_read[ARRAYSIZE];           //memory buffer to store ADC data
+uint16_t adc_read[ARRAYSIZE];           	//memory buffer to store ADC data
 int j = 0;
 
 extern volatile int counter;
  
 extern volatile uint16_t ADC_Value;		//to be written by ADC
-float Voltage;
-char str[23];
+float Voltage;					//variable for representing voltage
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -105,13 +105,12 @@ int main(void)
   /* USER CODE BEGIN 2 */
   
 ////ADC	configuration
-	LL_ADC_Enable(ADC1);
+	LL_ADC_Enable(ADC1);						//Enable ADC1
 
 	LL_ADC_StartCalibration(ADC1); 				//Calibration start
-    while(LL_ADC_IsCalibrationOnGoing(ADC1)) 	//Calibration Done?
+	while(LL_ADC_IsCalibrationOnGoing(ADC1))	//Wait till the calibration is finished
 		__NOP();
-
-	LL_ADC_REG_StartConversionSWStart(ADC1);	
+	LL_ADC_REG_StartConversionSWStart(ADC1);	//Start the conversion	
 
 
 ////	
