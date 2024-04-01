@@ -1,0 +1,35 @@
+Device Reset
+Command Code F0h
+
+Maximum 525ns. Counted from falling SCL edge of the command code acknowledge bit.
+
+
+
+1-Wire Reset
+Command Code B4h
+
+tRSTL + tRSTH + maximum 262.5ns, counted from the falling SCL edge of the command code
+acknowledge bit
+
+
+
+1-Wire Write Byte
+Command Code A5h
+
+8 x t SLOT + maximum 262.5ns, counted from falling edge of the last bit (LSB) of the data byte.
+
+
+
+1-Wire Read Byte
+Command Code 96h
+
+8 x t SLOT + maximum 262.5ns, counted from the falling SCL edge of the command code
+acknowledge bit.
+
+
+
+Set Read Pointer
+Command Code E1h
+
+None. The read pointer is updated on the rising SCL edge of the pointer code acknowledge bit.
+(Read Data Register address E1h)
